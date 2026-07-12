@@ -1,17 +1,18 @@
 {
-  "name": "shopping-zone-backend",
+  "name": "shopping-zone-frontend",
   "version": "1.0.0",
   "type": "module",
   "private": true,
-  "main": "server.js",
   "scripts": {
-    "dev": "node --watch server.js",
-    "start": "node server.js"
+    "dev": "vite --host 0.0.0.0 --port 5173",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 5173"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^17.4.2",
-    "express": "^4.18.3",
-    "mongoose": "^9.7.3"
-  }
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {}
 }

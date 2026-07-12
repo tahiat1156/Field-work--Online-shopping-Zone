@@ -1,0 +1,36 @@
+MONGODB CONNECTION STEPS FOR SHOPPING ZONE
+
+1. Open MongoDB Atlas.
+2. Create a free cluster.
+3. Go to Database Access and create username + password.
+4. Go to Network Access and add your IP address.
+5. Go to Database > Connect > Drivers and copy the connection string.
+6. In VS Code, open: backend/.env
+7. Add this:
+
+PORT=4000
+ADMIN_EMAIL=admin@shoppingzone.com
+ADMIN_PASSWORD=admin123
+MONGODB_URI=mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@YOUR_CLUSTER.mongodb.net/shoppingzone?retryWrites=true&w=majority
+MONGODB_DB_NAME=shoppingzone
+
+8. Replace YOUR_USERNAME, YOUR_PASSWORD, YOUR_CLUSTER.
+9. Run:
+
+npm install
+npm run install:all
+npm run dev
+
+10. Open this URL to check:
+http://localhost:4000/api/health
+
+MongoDB connected means it will show:
+storage: mongodb
+mongoConnected: true
+
+Admin panel:
+http://localhost:5173/#/admin
+
+Admin login:
+admin@shoppingzone.com
+admin123
